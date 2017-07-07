@@ -1,0 +1,13 @@
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\bin\Debug\TrackerGUI.exe.config
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\bin\Debug\TrackerGUI.exe
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\bin\Debug\TrackerGUI.pdb
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.csprojResolveAssemblyReference.cache
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.Properties.Resources.resources
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.TournamentViewerForm.resources
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.csproj.GenerateResource.Cache
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.exe
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.pdb
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.CreatePrizeForm.resources
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.CreateTeamForm.resources
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.CreateTournament.resources
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.TournamentDashboradForm.resources

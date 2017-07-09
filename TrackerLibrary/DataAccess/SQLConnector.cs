@@ -12,6 +12,30 @@ namespace TrackerLibrary.DataAccess
     public class SQLConnector : IDataConnection
     {
         /// <summary>
+        /// sparar personen i databasen
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Info om en person/medlem</returns>
+        public PersonData CreatePerson(PersonData data)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@FirstName", data.FirstName);
+                p.Add("@LastName", data.Lastname);
+                p.Add("@EmailAddress", data.Email);
+                p.Add("@PhoneNumber", data.PhoneNumber);
+                p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                connection.Execute("dbo.spPeople_Insert", p, commandType: CommandType.StoredProcedure);
+
+                data.Id = p.Get<int>("@id");
+
+                return data;
+            }
+        }
+
+        /// <summary>
         /// sparar priset i databasen
         /// </summary>
         /// <param name="data"></param>

@@ -39,7 +39,7 @@ namespace TrackerGUI
             }
             else
             {
-                MessageBox.Show("This form has invalid information.");
+                MessageBox.Show("Informationen su har fyllt i är felaktig. Försök igen!");
             }
 
         }

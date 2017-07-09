@@ -12,6 +12,10 @@ namespace TrackerLibrary.Data
     public class PersonData
     {
         /// <summary>
+        /// Idenifierare för personen
+        /// </summary>
+        public int Id { get; set; }
+        /// <summary>
         /// Deltagarens förnamn
         /// </summary>
         public string FirstName { get; set; }

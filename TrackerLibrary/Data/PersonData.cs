@@ -26,10 +26,18 @@ namespace TrackerLibrary.Data
         /// <summary>
         /// deltagarens mailadress
         /// </summary>
-        public string Email { get; set; }
+        public string EmailAddress { get; set; }
         /// <summary>
         /// deltagarens tel.nummer
         /// </summary>
         public string PhoneNumber { get; set; }
+
+        public string FullName
+        {
+            get
+            {
+                return $"{ FirstName } { Lastname }";
+            }
+        }
     }
 }

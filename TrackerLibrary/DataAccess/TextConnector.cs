@@ -68,5 +68,10 @@ namespace TrackerLibrary.DataAccess
 
             return data;
         }
+
+        public List<PersonData> GetPerson_All()
+        {
+            return PersonFile.FullFilePath().LoadFile().ConvertToPerson();
+        }
     }
 }

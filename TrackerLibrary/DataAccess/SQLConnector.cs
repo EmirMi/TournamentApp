@@ -23,7 +23,7 @@ namespace TrackerLibrary.DataAccess
                 var p = new DynamicParameters();
                 p.Add("@FirstName", data.FirstName);
                 p.Add("@LastName", data.Lastname);
-                p.Add("@EmailAddress", data.Email);
+                p.Add("@EmailAddress", data.EmailAddress);
                 p.Add("@PhoneNumber", data.PhoneNumber);
                 p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
@@ -58,5 +58,18 @@ namespace TrackerLibrary.DataAccess
                 return data;
             }
         }
+
+        public List<PersonData> GetPerson_All()
+        {
+            List<PersonData> output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
+            {
+                output = connection.Query<PersonData>("dbo.spPeople_GetAll").ToList();
+            }
+
+            return output;
+        }
+
     }
 }

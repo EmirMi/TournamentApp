@@ -59,7 +59,7 @@ namespace TrackerLibrary.DataAccess.TextAssets
                 p.Id = int.Parse(cols[0]);
                 p.FirstName = cols[1];
                 p.Lastname = cols[2];
-                p.Email = cols[3];
+                p.EmailAddress = cols[3];
                 p.PhoneNumber = cols[4];
                 output.Add(p);
             }
@@ -85,7 +85,7 @@ namespace TrackerLibrary.DataAccess.TextAssets
 
             foreach (PersonData p in data)
             {
-                lines.Add($"{p.Id},{p.FirstName},{p.Lastname},{p.Email},{p.PhoneNumber}");
+                lines.Add($"{p.Id},{p.FirstName},{p.Lastname},{p.EmailAddress},{p.PhoneNumber}");
             }
 
             File.WriteAllLines(fileName.FullFilePath(), lines);

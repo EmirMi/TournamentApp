@@ -67,6 +67,30 @@ namespace TrackerLibrary.DataAccess.TextAssets
             return output;
         }
 
+        public static List<TeamData> ConvertToTeam(this List<string> lines, string personFileName)
+        {
+            List<TeamData> output = new List<TeamData>();
+            List<PersonData> people = personFileName.FullFilePath().LoadFile().ConvertToPerson();
+
+            foreach (string line in lines)
+            {
+                string[] cols = line.Split(',');
+
+                TeamData t = new TeamData();
+                t.Id = int.Parse(cols[0]);
+                t.TeamName = cols[1];
+
+                string[] personIds = cols[2].Split('|');
+
+                foreach (string id in personIds)
+                {
+                    t.TeamMembers.Add(people.Where(x => x.Id == int.Parse(id)).First());
+                }
+            }
+
+            return output;
+        }
+
         public static void SaveToPrizeFile(this List<PrizeData> data, string fileName)
         {
             List<string> lines = new List<string>();
@@ -91,5 +115,36 @@ namespace TrackerLibrary.DataAccess.TextAssets
             File.WriteAllLines(fileName.FullFilePath(), lines);
         }
 
+        public static void SaveToTeamFile(this List<TeamData> data, string fileName)
+        {
+            List<string> lines = new List<string>();
+
+            foreach (TeamData t in data)
+            {
+                lines.Add($"{ t.Id},{ t.TeamName },{ ConvertPersonListToString(t.TeamMembers) }");
+            }
+
+            File.WriteAllLines(fileName.FullFilePath(), lines);
+        }
+
+        private static string ConvertPersonListToString(List<PersonData> people)
+        {
+            string output = "";
+
+            if(people.Count == 0)
+            {
+                return "";
+            }
+
+            foreach(PersonData p in people)
+            {
+                output += $"{ p.Id}|";
+            }
+
+            output = output.Substring(0, output.Length - 1);
+
+            return output;
+
+        }
     }
 }

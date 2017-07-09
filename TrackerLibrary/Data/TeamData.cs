@@ -11,6 +11,7 @@ namespace TrackerLibrary.Data
     /// </summary>
     public class TeamData
     {
+        public int Id { get; set; }
         /// <summary>
         /// lista över lagets deltagare
         /// </summary>

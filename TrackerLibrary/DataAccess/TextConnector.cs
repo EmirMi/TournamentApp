@@ -12,6 +12,7 @@ namespace TrackerLibrary.DataAccess
     {
         private const string PrizesFile = "PrizeData.csv";
         private const string PersonFile = "PersonData.csv";
+        private const string TeamFile = "TeamData.csv";
 
         /// <summary>
         /// sparar personen i en textfil
@@ -67,6 +68,28 @@ namespace TrackerLibrary.DataAccess
             prizes.SaveToPrizeFile(PrizesFile);
 
             return data;
+        }
+
+        public TeamData CreateTeam(TeamData data)
+        {
+            List<TeamData> teams = TeamFile.FullFilePath().LoadFile().ConvertToTeam(PersonFile);
+
+            int currentId = 1;
+
+            if (teams.Count > 0)
+            {
+                currentId = teams.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            data.Id = currentId;
+            //Lägga till nya data med ett nytt ID (+1)
+            teams.Add(data);
+            //konvertera till list<string>
+            //spara list<string> till textfilen
+            teams.SaveToTeamFile(TeamFile);
+            
+            return data;
+
         }
 
         public List<PersonData> GetPerson_All()

@@ -127,5 +127,17 @@ namespace TrackerGUI
                 SetUpLists();
             }
         }
+
+        private void createTeamButton_Click(object sender, EventArgs e)
+        {
+            TeamData t = new TeamData();
+
+            t.TeamName = teamNameValue.Text;
+            t.TeamMembers = selectedTeamMembers;
+
+            t = GlobalConfig.Connection.CreateTeam(t);
+
+            // TODO om vi inte stänger formen efter att vi skapat laget, reseta den
+        }
     }
 }

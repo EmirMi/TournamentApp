@@ -11,3 +11,7 @@ C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\Tracke
 C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.CreateTeamForm.resources
 C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.CreateTournament.resources
 C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\obj\Debug\TrackerGUI.TournamentDashboradForm.resources
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\bin\Debug\TrackerLibrary.dll
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\bin\Debug\TrackerLibrary.pdb
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\bin\Debug\Dapper.dll
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerGUI\bin\Debug\Dapper.xml

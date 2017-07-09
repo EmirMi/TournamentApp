@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePrizeForm));
             this.headerLabel = new System.Windows.Forms.Label();
-            this.prizeNumberValue = new System.Windows.Forms.TextBox();
+            this.placeNumberValue = new System.Windows.Forms.TextBox();
             this.prizeNumberLabel = new System.Windows.Forms.Label();
             this.placeNameValue = new System.Windows.Forms.TextBox();
             this.placeNameLabel = new System.Windows.Forms.Label();
@@ -53,12 +53,12 @@
             this.headerLabel.TabIndex = 12;
             this.headerLabel.Text = "Skapa ett pris";
             // 
-            // prizeNumberValue
+            // placeNumberValue
             // 
-            this.prizeNumberValue.Location = new System.Drawing.Point(400, 152);
-            this.prizeNumberValue.Name = "prizeNumberValue";
-            this.prizeNumberValue.Size = new System.Drawing.Size(269, 50);
-            this.prizeNumberValue.TabIndex = 14;
+            this.placeNumberValue.Location = new System.Drawing.Point(400, 152);
+            this.placeNumberValue.Name = "placeNumberValue";
+            this.placeNumberValue.Size = new System.Drawing.Size(269, 50);
+            this.placeNumberValue.TabIndex = 14;
             // 
             // prizeNumberLabel
             // 
@@ -95,6 +95,7 @@
             this.prizeAmountValue.Name = "prizeAmountValue";
             this.prizeAmountValue.Size = new System.Drawing.Size(269, 50);
             this.prizeAmountValue.TabIndex = 18;
+            this.prizeAmountValue.Text = "0";
             // 
             // prizeAmounLabel
             // 
@@ -113,6 +114,7 @@
             this.prizePercentageValue.Name = "prizePercentageValue";
             this.prizePercentageValue.Size = new System.Drawing.Size(269, 50);
             this.prizePercentageValue.TabIndex = 20;
+            this.prizePercentageValue.Text = "0";
             // 
             // prizePercentageLabel
             // 
@@ -135,7 +137,6 @@
             this.orLabel.Size = new System.Drawing.Size(99, 54);
             this.orLabel.TabIndex = 21;
             this.orLabel.Text = "eller";
-            this.orLabel.Click += new System.EventHandler(this.orLabel_Click);
             // 
             // createPrizeButton
             // 
@@ -151,6 +152,7 @@
             this.createPrizeButton.TabIndex = 22;
             this.createPrizeButton.Text = "Skapa";
             this.createPrizeButton.UseVisualStyleBackColor = true;
+            this.createPrizeButton.Click += new System.EventHandler(this.createPrizeButton_Click);
             // 
             // CreatePrizeForm
             // 
@@ -166,7 +168,7 @@
             this.Controls.Add(this.prizeAmounLabel);
             this.Controls.Add(this.placeNameValue);
             this.Controls.Add(this.placeNameLabel);
-            this.Controls.Add(this.prizeNumberValue);
+            this.Controls.Add(this.placeNumberValue);
             this.Controls.Add(this.prizeNumberLabel);
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,7 +184,7 @@
         #endregion
 
         private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.TextBox prizeNumberValue;
+        private System.Windows.Forms.TextBox placeNumberValue;
         private System.Windows.Forms.Label prizeNumberLabel;
         private System.Windows.Forms.TextBox placeNameValue;
         private System.Windows.Forms.Label placeNameLabel;

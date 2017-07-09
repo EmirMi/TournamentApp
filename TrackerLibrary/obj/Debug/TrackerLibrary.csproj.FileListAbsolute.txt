@@ -1,1 +1,7 @@
 C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.csprojResolveAssemblyReference.cache
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerLibrary\bin\Debug\TrackerLibrary.dll
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerLibrary\bin\Debug\TrackerLibrary.pdb
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.dll
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.pdb
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerLibrary\bin\Debug\Dapper.dll
+C:\Users\emirm\Desktop\C#\Projects\TournamentTracker\TrackerLibrary\bin\Debug\Dapper.xml
